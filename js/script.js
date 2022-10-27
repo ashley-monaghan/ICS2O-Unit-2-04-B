@@ -1,30 +1,21 @@
-// Copyright (c) 2022 Ashley Monaghan All rights reserved
+// Copyright (c) 2022 Ashley Monaghan all rights reserved
 //
 // Created by: Ashley Monaghan
 // Created on: Oct 2022
 // This file contains the JS functions for index.html
 
 "use strict"
-
 /**
- * Check servie worker.
- */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
-  })
-}
-
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
-}
-
-/**
- * This function displays an alert.
+ * This function calculates area and perimeter of triangle.
  */
 function calculate() {
-  document.getElementById("numbers").innerHTML = "<p>Hello, World!</p>"
+  // input
+  const height = parseInt(document.getElementById("height-of-triangle").value)
+  const base = parseInt(document.getElementById("base-of-triangle").value)
+
+  // process
+  const area = (base * height) / 2
+
+  // output
+  document.getElementById("area").innerHTML = "Area is: " + area + " cm²"
 }
