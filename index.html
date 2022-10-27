@@ -55,54 +55,68 @@
           <span class="mdl-layout-title">My first PWA</span>
         </div>
       </header>
-      <!-- Simple Textfield -->
-      <form action="#">
-        <p>XX1:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input
-            class="mdl-textfield__input"
-            type="text"
-            pattern="-?[0-9]*(\.[0-9]+)?"
-            id="xxx1"
-          />
-          <label class="mdl-textfield__label" for="xxx1">xxx1 ...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
-      <!-- Simple Textfield for hourly rate -->
-      <form action="#">
-        <p>XX2:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input
-            class="mdl-textfield__input"
-            type="text"
-            pattern="-?[0-9]*(\.[0-9]+)?"
-            id="xxx2"
-          />
-          <label class="mdl-textfield__label" for="xxx2">xxx2 ...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
+        <table>
+          <tr>
+            <th>
+              <img
+                src="./image/right_triangle.png"
+                alt="Triangle"
+                width="80%"
+                height="auto"
+                id="triangle-picture"
+              />
+            </th>
+            <th>
+              <h2>Formula:</h2>
+              <h3>A = (b x h) ÷ 2</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="height-of-triangle"
+              >Height ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="base-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="base-of-triangle"
+              >Base ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <br />
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          onclick="calculate()"
         >
-          Say "Hello, World!"
+          Calculate
         </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
-        <div id="numbers"></div>
+        <br />
+        <div id="answers">
+          <div id="area"></div>
+        </div>
       </main>
     </div>
   </body>
